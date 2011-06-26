@@ -5,11 +5,8 @@ Content:
 
 LVM
 LVM adds fast and reliable abstraction layer on top of classical partitions. Logical Volume Management provides a means to concatenate, stripe together or otherwise combine partitions into larger virtual ones that administrators can re-size or move, potentially without interrupting system use. Logical partitions aren't limited to size of physical discs. LVM also allows mirroring and snapshots.
-LVM layout
-PV
-VG
-LV
-Metadata
+LVM layout consists of three logical types: Physical Volume, Volume Group, Logical Volume.
+Physical Volume (PV) represents real hardware which can be harddisc, partition or LUN. PV is diveded into small pieces - Physical Extents (PE). PVs can be grouped into groups - Physical Volume Groups (PVG). PVGs are grouped together into Volume Groups (VG) which are divided into small pieces of Logical Extents (LE). LEs grouped together form Logical Volumes (LV). LVs represent raw block devices to running system. Grouping PVs into PVGs allows mapping one LE on more than one PE which allows mirroring and so on. PVs are created by putting Label on usualy second 512byte sector, but can be on any of first four sectors. Label stores name, uuid, size in bites and location of metadata. Metadata are stored in ASCII and contain configuration information about VG and are identical on each PV in same VG.  
 CLVM
 Mirroring
 EFI
