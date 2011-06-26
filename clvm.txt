@@ -1,0 +1,17 @@
+CLVM and GPT
+
+Content:
+1.		LVM
+
+LVM
+LVM adds fast and reliable abstraction layer on top of classical partitions. Logical Volume Management provides a means to concatenate, stripe together or otherwise combine partitions into larger virtual ones that administrators can re-size or move, potentially without interrupting system use. Logical partitions aren't limited to size of physical discs. LVM also allows mirroring and snapshots.
+LVM layout
+PV
+VG
+LV
+Metadata
+CLVM
+Mirroring
+EFI
+GPT
+
